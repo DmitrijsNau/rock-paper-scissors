@@ -12,9 +12,8 @@ function getComputerChoice() {
    }
    
 }
-let playerSelection = (prompt("Please pick rock, paper, or scissors"))
+
 let choice = getComputerChoice()
-console.log(playerSelection)
 function playRound(playerSelection,choice) {
     if (playerSelection === "rock" && choice === "paper") {
         console.log("You lose! Paper beats rock.")
@@ -32,4 +31,8 @@ console.log("You lost! Rock beats scissors.")
         console.log("It's a tie!")
     }
 } 
-playRound(playerSelection,choice)
+for (let i = 0; i < 5; i++) {
+    let playerSelection = (prompt("Please pick rock, paper, or scissors"))
+    playRound(playerSelection,choice)
+
+}
