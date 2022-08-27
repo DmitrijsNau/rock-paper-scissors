@@ -12,4 +12,24 @@ function getComputerChoice() {
    }
    
 }
-console.log(getComputerChoice())
+let playerSelection = (prompt("Please pick rock, paper, or scissors"))
+let choice = getComputerChoice()
+console.log(playerSelection)
+function playRound(playerSelection,choice) {
+    if (playerSelection === "rock" && choice === "paper") {
+        console.log("You lose! Paper beats rock.")
+    } else if (playerSelection === "scissors" && choice === "paper") {
+        console.log("You win! Scissors beats paper.")
+    } else if (playerSelection === "rock" && choice === "scissors") {
+        console.log("You win! Rock beats scissors.")
+    } else if (playerSelection === "paper" && choice === "scissors") {
+        console.log("You lost! Scissors beats paper.")
+    } else if (playerSelection === "scissors" && choice === "rock") {
+console.log("You lost! Rock beats scissors.")
+    } else if (playerSelection === "paper" && choice === "rock") {
+        console.log("You win! Paper beats rock.")
+    } else {
+        console.log("It's a tie!")
+    }
+} 
+playRound(playerSelection,choice)
